@@ -7,22 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-#       curl "https://generativelanguage.googleapis.com/v1beta/models/#     gemini-flash-latest:generateContent" \
-#         -H 'Content-Type: application/json' \
-#         -H 'X-goog-api-key: AIzaSyBjCJfBKxfh5o0eVBATeFI4WLF2MDDryOQ' \
-#         -X POST \
-#         -d '{
-#           "contents": [
-#             {
-#               "parts": [
-#                 {
-#                   "text": "Explain how AI works in a few words"
-#                 }
-#               ]
-#             }
-#           ]
-#         }'
-
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
     raise RuntimeError("GEMINI_API_KEY environment variable not set")
